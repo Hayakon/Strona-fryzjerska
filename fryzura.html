@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <div class="bl">
+        <h1>
+            <a href="index.html">SALON FRYZJERSKI</a>
+        </h1>
+    </div>
+
+    <div class="bp">
+        <h4>
+            <a href="fryzura.html">Ceny strzyżenia</a>
+        </h4>
+        <table>
+            <tr>
+                <th>Długość włosów</th>
+                <th>Cena</th>
+            </tr>
+            <tr>
+                <th>Krótkie</th>
+                <th id="ck">25</th>
+            </tr>
+            <tr>
+                <th>Średnie</th>
+                <th id="cs">30</th>
+            </tr>
+            <tr>
+                <th>Półdługie</th>
+                <th id="cpd">40</th>
+            </tr>
+            <tr>
+                <th>Dłógie</th>
+                <th id="cd">50</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="bl2">
+        <h2>PROMOCJA</h2>
+        <input type="radio" id="inkrot" name="promocja">
+        <label for="inkrot">Krótkie</label><br>
+        <input type="radio" id="insred" name="promocja">
+        <label for="insred">Średnie</label><br>
+        <input type="radio" id="inpoldl" name="promocja">
+        <label for="inpoldl">Półdługie</label><br>
+        <input type="radio" id="indlo" name="promocja">
+        <label for="indlo">Długie</label><br>
+        <button onclick="odkryjpromo()">Odkryj promocje</button> <br>
+
+        <span id="cenapromocyjna"></span>
+    </div>
+
+    <div class="bp2">
+        <img src="obraz1.jpg" alt="Fryzjerka" width="250px">
+   </div>
+
+    <div class="bl3">
+        <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+        <h4>Kontakt: 444 555 666</h4>
+    </div>
+
+    <div class="st">
+        <p>Autor: 010203040506070809</p>
+    </div>
+</body>
+<script>
+    function odkryjpromo(){
+        let input1 = document.getElementById('inkrot').checked;
+        let input2 = document.getElementById('insred').checked;
+        let input3 = document.getElementById('inpoldl').checked;
+        let input4 = document.getElementById('indlo').checked;
+
+        if(input1){
+            let cena = document.getElementById('ck').innerText;
+            let wynik = document.getElementById('cenapromocyjna');
+            wynik.innerText = "Cena promocyjna : " + (cena-10);
+        }
+        if(input2){
+            let cena = document.getElementById('cs').innerText;
+            let wynik = document.getElementById('cenapromocyjna');
+            wynik.innerText = "Cena promocyjna : " + (cena-10);
+        }
+        if(input3){
+            let cena = document.getElementById('cpd').innerText;
+            let wynik = document.getElementById('cenapromocyjna');
+            wynik.innerText = "Cena promocyjna : " + (cena-10);
+        }
+        if(input4){
+            let cena = document.getElementById('cd').innerText;
+            let wynik = document.getElementById('cenapromocyjna');
+            wynik.innerText = "Cena promocyjna : " + (cena-10);
+        }
+    }
+</script>
+</html>
